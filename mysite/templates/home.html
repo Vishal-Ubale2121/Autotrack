@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+
+<center>
+{% if user.is_authenticated %}
+<div class="jumbotron">
+<h1>Welcome to</h1>
+  <h1>Future {{ user.username }}</h1>
+  <br>
+
+
+<form action="start">
+    <center><a href="/start" class="btn btn-primary">Start</a></center>
+</form>
+  {% else %}{% endif %}
+</div>
+
+
+</center>
+
+</div>
+  <p>
+    <strong>Total users registered: </strong> {{ count }}
+  </p>
+{% endblock %}
